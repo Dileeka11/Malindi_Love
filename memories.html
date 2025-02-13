@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Our Memories Together</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #ff758c 0%, #ff7eb3 100%);
+            font-family: 'Arial', sans-serif;
+        }
+
+        .memories-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .title {
+            font-size: 3.5em;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: 'Brush Script MT', cursive;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #fff;
+            font-style: italic;
+            margin-bottom: 40px;
+        }
+
+        .memory-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .memory-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .memory-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .memory-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .memory-content {
+            padding: 20px;
+        }
+
+        .memory-date {
+            font-size: 0.9em;
+            color: #ff758c;
+            margin-bottom: 10px;
+        }
+
+        .memory-title {
+            font-size: 1.4em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .memory-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .heart-decoration {
+            position: absolute;
+            font-size: 24px;
+            color: #ff758c;
+            opacity: 0.6;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .love-quote {
+            text-align: center;
+            color: #fff;
+            font-size: 1.8em;
+            font-style: italic;
+            margin: 50px 0;
+            padding: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #fff;
+        }
+
+        .footer-heart {
+            color: #ff4d6d;
+            font-size: 1.5em;
+            animation: pulse 1.5s ease infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .nav-button {
+            position: fixed;
+            bottom: 40px;
+            left: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="memories-container">
+        <header class="header">
+            <h1 class="title">Our Beautiful Journey Together</h1>
+            <p class="subtitle">Every moment with you is a treasure to cherish forever</p>
+        </header>
+
+        <div class="memory-grid">
+            <div class="memory-card">
+                <img src="1.jpg" alt="First Date" class="memory-image">
+                <div class="memory-content">
+                    <div class="memory-date">October 26, 2023</div>
+                    <h3 class="memory-title">First Of all, the day I had a feeling about you.</h3>
+                    <p class="memory-description">You asked me the details of this trip. That was the first time I had a feeling about you.</p>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <img src="2.jpg" alt="Beach Day" class="memory-image">
+                <div class="memory-content">
+                    <div class="memory-date">November 28, 2023</div>
+                    <h3 class="memory-title">The day I had a serious crush on you</h3>
+                    <p class="memory-description">You waited for me at campus until I arrived, and then you called me before you left. That day, I couldn't help but wonder... what if you were truly mine?.</p>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <img src="3.jpg" alt="Movie Night" class="memory-image">
+                <div class="memory-content">
+                    <div class="memory-date">April 4, 2024</div>
+                    <h3 class="memory-title">The happiest moment of my life</h3>
+                    <p class="memory-description">That moment was one of the happiest times of my life. I felt very happy when we were together in front of everyone.</p>
+                </div>
+            </div>
+
+            <div class="memory-card">
+                <img src="4.jpg" alt="Hiking Adventure" class="memory-image">
+                <div class="memory-content">
+                    <div class="memory-date">April 4, 2024</div>
+                    <h3 class="memory-title">The only couple photo we have</h3>
+                    <p class="memory-description">We have only one couple photo together, but I sincerely hope that in the future, we will have many more beautiful moments captured. I believe that day will come, and I’m waiting for it with love in my heart.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="love-quote">
+            "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine."
+        </div>
+
+        <footer class="footer">
+            <p>Made with <span class="footer-heart">❤</span> for you</p>
+        </footer>
+    </div>
+
+    <div class="page-transition">
+        <div class="transition-heart">❤️</div>
+    </div>
+
+    <a href="index.html" class="nav-button" id="navButton">
+        <span>💌</span>
+    </a>
+
+    <div class="love-path" id="lovePath"></div>
+
+    <script>
+        $(document).ready(function() {
+            // Add floating hearts randomly
+            function addFloatingHeart() {
+                const heart = $('<div class="heart-decoration">❤</div>');
+                heart.css({
+                    left: Math.random() * 100 + '%',
+                    top: Math.random() * 100 + '%'
+                });
+                $('body').append(heart);
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 3000);
+            }
+
+            setInterval(addFloatingHeart, 2000);
+
+            // Smooth scroll animation for memory cards
+            $(window).scroll(function() {
+                $('.memory-card').each(function() {
+                    const cardPosition = $(this).offset().top;
+                    const scrollPosition = $(window).scrollTop();
+                    const windowHeight = $(window).height();
+                    
+                    if (scrollPosition > cardPosition - windowHeight + 100) {
+                        $(this).css('opacity', '1');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
